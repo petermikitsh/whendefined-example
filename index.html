@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>title</title>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <!-- page content -->
+  <h1>Hello World</h1>
+  <my-example id="foo" bar="baz"></my-example>
+  <script>
+    window.customElements.whenDefined('my-example').then(() => {
+      const elem = document.getElementById('foo');
+      console.log('elem.innerText is', elem.innerText);
+    })
+  </script>
+</body>
+
+</html>
